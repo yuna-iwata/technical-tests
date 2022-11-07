@@ -37,7 +37,7 @@ def points_for_word(word):
 def shuffle_drawseven():
     bag = 12*['E']+9*['A','I']+8*['O']+6*['N','R','T']+4*['L','S','U','D']+3*['G']+2*['B', 'C', 'M', 'P', 'F', 'H', 'V', 'W', 'Y']+1*['K', 'J', 'X', 'Q', 'Z']
     random.shuffle(bag)
-    return bag
+    return bag[:7]
 
 # tests
 print(points('e')) #should be 1
