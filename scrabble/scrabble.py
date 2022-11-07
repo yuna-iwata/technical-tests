@@ -26,12 +26,19 @@ def points(letter):
     elif(letter_up in ['Q','Z']):
         return 10
 
-
+def points_for_word(word):
+    total_points = 0
+    split_word = list(word)
+    for letter in split_word:
+        total_points += points(letter)
+    return total_points
 
 
 
 # tests
-print(points('q'))
+print(points('e')) #should be 1
+print(points_for_word('guardian')) #should be 10
+
 
 # f = open('scrabble/dictionary.txt','r')
 # words = []
