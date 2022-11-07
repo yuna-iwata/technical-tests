@@ -39,18 +39,20 @@ def shuffle_drawseven():
     random.shuffle(bag)
     return bag[:7]
 
-def find_valid_word():
+def find_valid_word(inputword):
     f = open('scrabble/dictionary.txt','r')
     words = []
     for word in f:
-        words.append(word)
+        word_nospace = word.strip()
+        words.append(word_nospace)
     return words
 
 # tests
 print(points('e')) #should be 1
 print(points_for_word('guardian')) #should be 10
-print(shuffle_drawseven())
-print(find_valid_word()) 
+seven = shuffle_drawseven()
+print(seven)
+print(find_valid_word('guardian')) 
 
 
 
