@@ -39,20 +39,31 @@ def shuffle_drawseven():
     random.shuffle(bag)
     return bag[:7]
 
-def find_valid_word(inputword):
+def find_valid_word(inputletters):
     f = open('scrabble/dictionary.txt','r')
     words = []
     for word in f:
         word_nospace = word.strip()
         words.append(word_nospace)
     return words
+    
+    # validwords = []
+    # for x in words:
+        # for letter in inputletters:
+        #     if(letter in x):
+        #         
+    # return validwords
+    # havent finished this function but am trying to find out if the input letters can be made into any of the valid words.
+    # thought of searching if each letter exists in a word and looping through but now realising might be issues with double letters 
+
+            
 
 # tests
 print(points('e')) #should be 1
 print(points_for_word('guardian')) #should be 10
 seven = shuffle_drawseven()
 print(seven)
-print(find_valid_word('guardian')) 
+print(find_valid_word('uardiang')) 
 
 
 
