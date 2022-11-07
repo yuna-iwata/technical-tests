@@ -8,6 +8,7 @@
 # longestvalidword() -> find the longest valid word  from findvalidword()
 # plan the rest if i get that far
 
+import random
 
 def points(letter):
     letter_up = letter.upper()
@@ -33,11 +34,15 @@ def points_for_word(word):
         total_points += points(letter)
     return total_points
 
-
+def shuffle_drawseven():
+    bag = 12*['E']+9*['A','I']+8*['O']+6*['N','R','T']+4*['L','S','U','D']+3*['G']+2*['B', 'C', 'M', 'P', 'F', 'H', 'V', 'W', 'Y']+1*['K', 'J', 'X', 'Q', 'Z']
+    random.shuffle(bag)
+    return bag
 
 # tests
 print(points('e')) #should be 1
 print(points_for_word('guardian')) #should be 10
+print(shuffle_drawseven())
 
 
 # f = open('scrabble/dictionary.txt','r')
